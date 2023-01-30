@@ -1,54 +1,43 @@
 public class Main {
     public static void main(String[] args) {
 
-        // IF
+        Persona persona = new Persona();
 
-        var numeroIf = 3;
-
-        if (numeroIf == 0) {
-            System.out.println("El número es 0.");
-        } else if (numeroIf < 0) {
-            System.out.println("El número es Negativo.");
-        } else {
-            System.out.println("El número es Positivo.");
-        }
-
-        // WHILE
-
-        var numeroWhile = 1;
-
-        do {
-            System.out.println(numeroWhile);
-            numeroWhile = numeroWhile + 1;
-        } while (numeroWhile < 3);
-            numeroWhile = numeroWhile + 1; //numeroWhile++
-            System.out.println(numeroWhile);
-
-        // FOR
-
-
-        for (int numeroFor = 0; numeroFor <= 3; numeroFor++){
-            System.out.println(numeroFor);
-        }
-
-        // SWITCH
-
-        var estacion = "verano";
-        switch (estacion){
-            case "verano":
-                System.out.println("Es verano");
-                break;
-            case "primavera":
-                System.out.println("Es primavera");
-                break;
-            case "otoño":
-                System.out.println("Otoño");
-                break;
-            case "invierno":
-                System.out.println("Es invierno");
-                break;
-            default:
-                System.out.println(estacion);
-        }
+        persona.setEdad(25);
+        persona.setNombre("ramon");
+        persona.setTelefono(4219682);
+        System.out.println("La edad es: "+persona.getEdad());
+        System.out.println("El nombre es: "+persona.getNombre());
+        System.out.println("El telefono es: "+persona.getTelefono());
     }
+}
+class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
+
+    //edad
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+    public int getEdad(){
+        return edad;
+    }
+
+    //nombre
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+
+    //telefono
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    public int getTelefono() {
+        return telefono;
+    }
+
 }
